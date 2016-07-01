@@ -1,0 +1,27 @@
+10. NPM
+    https://www.npmjs.com/
+
+20. Semantic Versioning 2.0.0
+    http://semver.org/
+
+30. ExpressJS
+    http://expressjs.com/
+
+40. PostgreSQL
+    a. http://www.techrepublic.com/blog/diy-it-guy/diy-a-postgresql-database-server-setup-anyone-can-handle/
+    b. http://www.postgresonline.com/downloads/special_feature/postgresql83_psql_cheatsheet.pdf
+    c. https://www.pluralsight.com/courses/postgresql-getting-started
+
+50. https://blog.risingstack.com/node-js-security-checklist/
+
+
+
+
+
+Curiosidade:
+
+Exemplos de diversos tipos de servidores
+    https://learn.bevry.me/node/server-simple/
+
+HTTP Status Codes
+    http://www.restapitutorial.com/httpstatuscodes.html
