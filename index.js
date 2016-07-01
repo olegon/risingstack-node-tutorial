@@ -1,6 +1,26 @@
 'use strict';
 
+
+(function expressServer2() {
+    const app = require('./app')
+    const port = process.env.PORT || 3000
+
+    app.listen(port, function(err) {
+        if (err) {
+            throw err
+        }
+
+        console.log(`server is listening on ${port}...`)
+    })
+
+    return app
+})();
+
+
+
 (function expressServer() {
+    return;
+
     const path = require('path');
     const express = require('express');
     const exphbs = require('express-handlebars');

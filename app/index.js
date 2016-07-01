@@ -1,24 +1,44 @@
-const readline = require('readline');
-const calc = require('./calc.js');
+const path = require('path')
 
-function runREPL () {
-    const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout
-    });
+const express = require('express')
+const exphbs = require('express-handlebars')
+const bodyParser = require('body-parser')
+const passport = require('passport')
+const session = require('express-session')
+const RedisStore = require('connect-redis')(session)
 
-    rl.question('Digite números separados por espaços para somá-los: ', (answer) => {
-        const numeros = answer.split(' ')
-            .map(n => {
-                var number = parseFloat(n);
+const config = require('../config')
+const app = express()
 
-                return isNaN(number) ? 0 : number;
-            });
+app.use(bodyParser.urlencoded({
+    extended: false
+}))
 
-        console.log(`A soma desses números é: ${calc.sum(numeros)}`);
+require('./authentication').init(app)
 
-        rl.close();
-    });
-}
+app.use(session({
+    store: new RedisStore({
+        url: config.redisStore.url
+    }),
+    secret: config.redisStore.secret,
+    resave: false,
+    saveUninitialized: false
+}))
 
-module.exports.runREPL = runREPL;
+app.use(passport.initialize())
+app.use(passport.session())
+
+app.engine('.hbs', exphbs({
+    defaultLayout: 'layout',
+    extname: '.hbs',
+    layoutsDir: path.join(__dirname),
+    partialsDir: path.join(__dirname)
+}))
+
+app.set('view engine', '.hbs')
+app.set('views', path.join(__dirname))
+
+require('./user').init(app)
+require('./note').init(app)
+
+module.exports = app

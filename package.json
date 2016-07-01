@@ -1,34 +1,37 @@
 {
-    "name": "risingstack-node-tutorial",
-    "version": "1.0.0",
-    "description": "Following https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js",
-    "main": "index.js",
-    "directories": {
-        "test": "test"
-    },
-    "dependencies": {},
-    "devDependencies": {},
-    "scripts": {
-        "test": "mocha",
-        "start": "node index.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/olegon/risingstack-node-tutorial.git"
-    },
-    "keywords": [],
-    "author": "Leandro Gonçalves de Oliveira",
-    "license": "MIT",
-    "devDependencies": {
-        "mocha": "^2.5.3"
-    },
-    "dependencies": {
-        "express": "^4.14.0",
-        "express-handlebars": "^3.0.0",
-        "request-promise": "^3.0.0"
-    },
-    "bugs": {
-        "url": "https://github.com/olegon/risingstack-node-tutorial/issues"
-    },
-    "homepage": "https://github.com/olegon/risingstack-node-tutorial#readme"
+  "name": "risingstack-node-tutorial",
+  "version": "1.0.0",
+  "description": "Following https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-redis": "^3.1.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.13.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "request-promise": "^3.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olegon/risingstack-node-tutorial.git"
+  },
+  "keywords": [],
+  "author": "Leandro Gonçalves de Oliveira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olegon/risingstack-node-tutorial/issues"
+  },
+  "homepage": "https://github.com/olegon/risingstack-node-tutorial#readme"
 }
