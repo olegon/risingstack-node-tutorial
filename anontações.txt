@@ -1,0 +1,73 @@
+01. Getting started with Node.js
+    Para rodar diferentes versões do Node na mesma máquina é interessante usar o "nvm" (https://github.com/creationix/nvm)
+
+    O versionamento do Node.js é parecido com o do Linux: versão par (4, 6, 8, ...) significa versão estável e ímpar (5, 7, ...) significa versão experimental.
+
+    Na área de scripts do "package.json" é interessante ter dois script:
+        start   -> É invocado com '$ npm start'
+        test    -> É invocado com '$ npm test'
+
+
+
+02. Using NPM
+    É apresentado o comando '$ npm install <package> <options>' com --save e --save-dev, os "npm scripts" e "scoped packages", que podem ser instalados via "$ npm install @myorg/mypackage --save-dev", por exemplo.
+
+
+
+03. Understanding async programming in Node.js
+    É apresentado o uso de callback e sua característica do primeiro argumento ser sempre um erro (com um valor, caso haja erro, ou null)
+
+    Depois é falado sobre o Event Loop (https://youtu.be/8aGhZQkoFbQ) e um pouco de Promises ES6
+
+
+
+04. Your first Node.js server
+    Apresentado middlewares, os objetos Request e Response, e um pouco de Express.js
+
+    Ah! Também é apresentado a variável de ambiente "DEBUG" o uso de '$ DEBUG=* node index.js' para obter informações de DEBUG. ;)
+
+
+
+05. Node.js database
+    É falado um pouco sobre "MongoDB" e "PostgreSQL". Links interessantes no arquivo /whats-next.txt
+
+
+
+06. Node.js request module
+    É dito um pouco sobre o módulo "request", que facilita o uso de requests, pois com Node.js é um pouco mais chato, e de sua versão baseada em promises "request-promise". É dado um desafio legal de integrar o site com uma API pública.
+
+
+
+07. Node.js project structure
+    05 regras de ouro:
+
+        Rule 01: Organize your files around features, not roles.
+            A ideia consiste em criar diretórios para diferentes áreas do projeto, como produto e usuário, por exemplo. Cada diretório possui seus arquivos de server e front-end.
+
+        Rule 02: Don't put logic in index.js files
+            O arquivo index.js de cada "módulo" deve APENAS exportar funcionalidade de outros arquivos.
+
+        Rule 03: Place your test files next to the implementation
+            A justifica é que testes TAMBÉM servem como documentação do código, então por isso é melhor eles ficarem próximos ao que é testado. Arquivos adicionais dos testes devem ficar em um diretório "test".
+
+        Rule 04: Use a config directory
+            Todos as configurações devem ficar em um módulo de configuração
+
+        Rule 05: Put your long npm scripts in a "script" directory
+
+
+
+08. Node.js authentication using Passport.js
+
+
+
+
+
+
+
+
+
+
+
+
+.
