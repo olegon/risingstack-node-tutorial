@@ -11,10 +11,12 @@ module.exports = function(app) {
                 json: true
             })
             .then((joke) => {
-                res.render('joke', joke.value);
+                res.render('joke/index', joke.value);
             })
             .catch((err) => {
-                res.render('error');
+                res.render('error', {
+                    message: 'Algo deu errado! :('
+                });
             });
     })
 };
