@@ -4,7 +4,7 @@ function initUser(app) {
     app.get('/', renderWelcome)
 
     app.get('/profile', passport.authenticationMiddleware(), renderProfile)
-    
+
     app.post('/login', passport.authenticate('local', {
         successRedirect: '/profile',
         failureRedirect: '/'

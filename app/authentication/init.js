@@ -4,8 +4,8 @@ const LocalStrategy = require('passport-local').Strategy
 const authenticationMiddleware = require('./middleware')
 
 const user = {
-    username: 'test-user',
-    password: 'test-password',
+    username: 'admin',
+    password: 'admin',
     id: 1
 }
 

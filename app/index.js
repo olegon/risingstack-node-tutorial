@@ -38,7 +38,10 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs')
 app.set('views', path.join(__dirname))
 
+app.use('/static', express.static(path.join(__dirname, '../static')));
+
 require('./user').init(app)
 require('./note').init(app)
+require('./joke').init(app)
 
 module.exports = app
