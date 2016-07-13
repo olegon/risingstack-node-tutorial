@@ -1,11 +1,11 @@
 # RisingStack Node Tutorial
 
-Seguindo o [Node Hero Tutorial.](https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js)
+Seguindo o [Node Hero Tutorial](https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js).
 
 
 ## 01. Getting started with Node.js
 
-Para rodar diferentes versões do Node na mesma máquina é interessante usar o [nvm.](https://github.com/creationix/nvm)
+Para rodar diferentes versões do Node na mesma máquina é interessante usar o [nvm](https://github.com/creationix/nvm).
 
 O versionamento do Node.js é parecido com o do Linux: versão par (4, 6, 8, ...) significa versão estável e ímpar (5, 7, ...) significa versão experimental.
 
