@@ -38,7 +38,7 @@ Ah! Também é apresentado a variável de ambiente `DEBUG` o uso de `$ DEBUG=* n
 
 ## 05. Node.js database
 
-É falado um pouco sobre "MongoDB" e "PostgreSQL". Links interessantes no arquivo /whats-next.txt
+É falado um pouco sobre "MongoDB" e "PostgreSQL". Links interessantes no [final da página](#o-que-ler-em-seguida).
 
 
 
