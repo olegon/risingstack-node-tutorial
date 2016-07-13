@@ -12,9 +12,13 @@
     b. http://www.postgresonline.com/downloads/special_feature/postgresql83_psql_cheatsheet.pdf
     c. https://www.pluralsight.com/courses/postgresql-getting-started
 
-50. https://blog.risingstack.com/node-js-security-checklist/
+50. Segurança
+    a. https://blog.risingstack.com/node-js-security-tips/
+    b. https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet
+    c. https://blog.risingstack.com/node-js-security-checklist/
 
-
+60. Node.js em produção
+    https://blog.risingstack.com/operating-node-in-production/
 
 
 

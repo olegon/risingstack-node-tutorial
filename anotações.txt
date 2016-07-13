@@ -122,6 +122,63 @@
 
 
 
+11. Node.js security
+    Regras de segurança:
+
+        Rule 01: não use 'eval'.
+
+        Rule 02: sempre use "strict mode".
+            Isso evita os silent errors, grande vilões.
+
+        Rule 03: tome cuidado ao lidar com erros.
+            Sempre faça log dos erros, mas nunca os exiba ao usuário.
+
+        Rule 04: faça análise estática do código.
+            Use ESLint. Use Facebook's Flow!
+
+        Rule 05: nunca rode processos com direitos de administrador.
+            É comum pessoas rodarem com direito de administrador para a aplicação ouvir nas portas 80/443, porém isso é um péssima prática, pois isso pode levar ao processo derrubar o sistema inteiro.
+
+        Rule 06: não se esqueça do setup do cabeçalhos obrigatórios!
+            - Strict-Transport-Security: obriga a presença de HTTPS.
+            - X-Frame-Options: proteção contra Clickjacking (https://www.owasp.org/index.php/Clickjacking)
+            - X-XSS-Protection: nos navegadores mais atuais, habilita o filtro contra cross-site scripting (XSS)
+            - X-Content-Type-Options: prevents browsers from MIME-sniffing a response away from the declared content-type
+            - Content-Security-Policy: prevents a wide range of attacks, including Cross-site scripting and other cross-site injections
+
+            Uma dica é usar o pacote 'helmet':
+
+            (function () {
+                const express = require('express')
+                const helmet = require('helmet')
+
+                var app = express()
+
+                app.use(helmet())
+
+                // ...
+            })();
+
+        Rule 07: cuidados com sessão do usuário.
+            Cookies de sessão devem ser Secure + HttpOnly.
+
+        Rule 08: cuidados com o escopo do cookie.
+            - domain
+            - path
+            - expires
+
+            Dica: use o pacote cookie-session.
+
+        Rule 09: procure por vulnerabilidades com o pacote Retire.js
+
+        Rule 10: audite seus módulos com o pacote nsp (Node Security Platform CLI-
+
+        )
+
+
+
+
+
 
 
 
